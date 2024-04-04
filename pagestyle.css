@@ -1,0 +1,137 @@
+/* Stel algemene stijlen in voor de body */
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Opmaak voor het hoofdtekstgebied (h1) */
+h1 {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* Opmaak voor het hoofdtekstgebied (h1) */
+h1.img-title {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+}
+
+/* Opmaak voor subkoppen (h2) */
+h2 {
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+/* Opmaak voor lichtere koppen (h3) */
+h3 {
+    font-weight: lighter;
+}
+
+.titles:hover{
+    cursor: pointer;
+}
+
+/* Algemene opmaak voor paragrafen (p) */
+.text {
+    margin: 10px 50px;
+    margin-bottom:40px;
+}
+
+/* Stijlen voor scheidingslijnen (hr) */
+hr {
+    width: 90%;
+    height: 2%;
+    margin: auto;
+    opacity: 0.5;
+}
+
+/* Opmaak voor het "dev"-element */
+#dev {
+    position: absolute;
+    right: 3vh;
+    top: 3vh;
+    font-size: 50px;
+    font-variation-settings: 'FILL' 1, 'wght' 250, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Interactie wanneer de muis over het "dev"-element gaat */
+#dev:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+/* Stijlen voor het pop-upvenster (popup) */
+#popup {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    height: 55vh;
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0, .95);
+}
+
+/* Zorg ervoor dat de afbeeldingen van de ontwikkelaar een ronde vorm hebben (dev-pic) */
+.dev-pic {
+    border-radius: 50%;
+    height: 20vh;
+    width: 20vh;
+    margin-top: 5vh;
+    margin-bottom: 1.5vh;
+}
+
+/* Toon het pop-upvenster wanneer de muis over het "dev"-element gaat */
+#dev:hover + #popup {
+    display: block;
+    animation: fade-in 0.25s forwards;
+}
+
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #292626;
+    color:rgb(212, 210, 210);
+    border-radius: 25px;
+    box-shadow: 2px 2px 50px rgba(255, 255, 255, 0.22);
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    width:450px;
+    height:450px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+ul{
+    text-align: left;
+}
+
+/* Opmaak voor de voettekst (footer) */
+footer p, footer a {
+    padding: 1% 10px;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+@keyframes fade-in {
+    0% {
+        background-color: rgb(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgb(0, 0, 0, .95);
+    }
+}

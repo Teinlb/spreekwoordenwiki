@@ -1,0 +1,204 @@
+/* Stel algemene stijlen in voor de body */
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Opmaak voor het hoofdtekstgebied (h1) */
+h1 {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* Opmaak voor het hoofdtekstgebied (h1) */
+h1.img-title {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+}
+
+/* Opmaak voor subkoppen (h2) */
+h2 {
+    font-size: 30px;
+    font-style: italic;
+}
+
+/* Opmaak voor lichtere koppen (h3) */
+h3 {
+    font-weight: lighter;
+}
+
+.titles:hover{
+    cursor: pointer;
+}
+
+/* Algemene opmaak voor paragrafen (p) */
+p {
+    margin: 10px 50px;
+}
+
+/* Algemene opmaak voor links (a) */
+#source {
+    margin: 10px 50px;
+    color: white;
+}
+
+/* Stijlen voor scheidingslijnen (hr) */
+hr {
+    width: 90%;
+    height: 2%;
+    margin: auto;
+    opacity: 0.5;
+}
+
+/* Opmaak voor het "dev"-element */
+#dev {
+    position: absolute;
+    right: 3vh;
+    top: 3vh;
+    font-size: 50px;
+    font-variation-settings: 'FILL' 1, 'wght' 250, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Interactie wanneer de muis over het "dev"-element gaat */
+#dev:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+/* Stijlen voor het pop-upvenster (popup) */
+#popup {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    height: 55vh;
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0, .95);
+}
+
+/* Zorg ervoor dat de afbeeldingen van de ontwikkelaar een ronde vorm hebben (dev-pic) */
+.dev-pic {
+    border-radius: 50%;
+    height: 20vh;
+    width: 20vh;
+    margin-top: 5vh;
+    margin-bottom: 1.5vh;
+}
+
+/* Toon het pop-upvenster wanneer de muis over het "dev"-element gaat */
+#dev:hover + #popup {
+    display: block;
+    animation: fade-in 0.25s forwards;
+}
+
+/* Opmaak voor het hoofdgedeelte van de inhoud (main) */
+main {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 25px;
+}
+
+/* Stijlen voor de spreekwoord containers */
+.spreekwoord {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    margin: 29px;
+    box-shadow: 10px 10px 250px rgba(255, 255, 255, 0.35);
+    transition: width 1s, height 2s;
+}
+
+
+/* Specifieke stijlen voor spreekwoord containers met de class "info" */
+.spreekwoord.info {
+    width: 458px;
+    height: 200px;
+}
+
+/* Zorg ervoor dat afbeeldingen binnen de spreekwoorden goed passen en ronde hoeken hebben */
+.img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transition: width 1s, height 2s, opacity 0.25s;
+}
+
+.img.front{
+    object-fit: cover;
+}
+
+/* Maak de voorkant van spreekwoorden onzichtbaar wanneer de muis erover beweegt */
+.img.front:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.img.back{
+    background-color: rgb(0, 0, 0);
+}
+
+/* Media-query voor grotere schermen (minimale breedte van 800px) */
+@media (min-width: 800px) {
+    .spreekwoord {
+        width: 250px;
+        height: 250px;
+        margin: 36px;
+    }
+    .spreekwoord.info {
+        width: 572px;
+        height: 250px;
+    }
+    h1.img-title { 
+        font-size: 21px;
+    }
+}
+
+/* Media-query voor nog grotere schermen (minimale breedte van 1000px) */
+@media (min-width: 1000px) {
+    .spreekwoord {
+        width: 350px;
+        height: 350px;
+        margin: 50px;
+    }
+    .spreekwoord.info {
+        width: 800px;
+        height: 350px;
+    }
+    h1.img-title { 
+        font-size: 28px;
+    }
+}
+
+
+/* Opmaak voor de voettekst (footer) */
+footer p, footer a {
+    padding: 1% 10px;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+
+@keyframes fade-in {
+    0% {
+        background-color: rgb(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgb(0, 0, 0, .95);
+    }
+}
